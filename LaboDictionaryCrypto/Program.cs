@@ -46,6 +46,9 @@
 
             // Console.WriteLine(crypto["ABC"]); // coin opvragen met indexnotatie via onbestaande key -> KeyNotFoundException
 
+            // 3.6
+            crypto.Remove("SOL");
+
         }
     }
 }
