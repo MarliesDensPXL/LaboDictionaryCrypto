@@ -27,6 +27,8 @@
             Console.WriteLine($"De nieuwe hoeveelheid ETH is {crypto["ETH"]} coins.");
 
             //3.4
+            bool inPortfolio = crypto.ContainsKey("SOL");           
+            Console.WriteLine(inPortfolio ? "Deze coin zit al in mijn portfolio." : "Deze coin zit nog niet in mijn portfolio.");
         }
     }
 }
