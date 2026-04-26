@@ -49,6 +49,12 @@
             // 3.6
             crypto.Remove("SOL");
 
+            //3.7
+            foreach (var kv in crypto)
+            {
+                Console.WriteLine($"{kv.Key}: {kv.Value,4} coins");
+            }
+
         }
     }
 }
