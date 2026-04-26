@@ -17,11 +17,16 @@
             crypto.Add("ADA", 5);
 
             //3.1
-            foreach (var coin in crypto)
+            foreach (var kv in crypto)
             {
-                Console.WriteLine($"{coin.Key}: {coin.Value,4} coins");
+                Console.WriteLine($"{kv.Key}: {kv.Value,4} coins");
             }
 
+            //3.3 
+            crypto["ETH"] = 3;
+            Console.WriteLine($"De nieuwe hoeveelheid ETH is {crypto["ETH"]} coins.");
+
+            //3.4
         }
     }
 }
