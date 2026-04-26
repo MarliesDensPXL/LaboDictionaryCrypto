@@ -29,6 +29,23 @@
             //3.4
             bool inPortfolio = crypto.ContainsKey("SOL");           
             Console.WriteLine(inPortfolio ? "Deze coin zit al in mijn portfolio." : "Deze coin zit nog niet in mijn portfolio.");
+
+            //3.5
+            double amount;
+            string key = "ABC";
+            bool found = crypto.TryGetValue(key, out amount);
+
+            if (found)
+            {
+                Console.WriteLine($"{key}: {amount} coins");
+            }
+            else
+            {
+                Console.WriteLine($"{key} zit nog niet in je portfolio.");
+            }
+
+            // Console.WriteLine(crypto["ABC"]); // coin opvragen met indexnotatie via onbestaande key -> KeyNotFoundException
+
         }
     }
 }
